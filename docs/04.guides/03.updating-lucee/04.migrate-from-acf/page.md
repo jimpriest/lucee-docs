@@ -76,3 +76,21 @@ Hash("somestring", "SHA-512", "utf-8", 100); // in ACF
 Hash("somestring", "SHA-512", "utf-8", 101); // Lucee
 
 ```
+
+
+### Param does not support Adobe ColdFusion shorthand syntax ###
+
+**What:**
+Adobe ColdFusion allows a 'shorthand' which is not supported in Lucee.  In Lucee you should declare all param properties:
+
+Adobe ColdFusion:
+
+```luceescript
+param string foo="";
+```
+
+Lucee:
+
+```luceescript
+param name="foo" type="string" default="";
+```
